@@ -1,20 +1,14 @@
 import MainLayout from "@/components/MainLayout";
 import namanPortrait from "@/assets/naman-portrait.jpg";
-
 const About = () => {
-  return (
-    <MainLayout>
+  return <MainLayout>
       <section className="py-12 md:py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Left - Portrait */}
             <div className="flex justify-center md:justify-start">
               <div className="relative">
-                <img
-                  src={namanPortrait}
-                  alt="Naman Jain"
-                  className="w-72 md:w-80 lg:w-96 h-auto rounded-2xl object-cover shadow-lg"
-                />
+                <img src={namanPortrait} alt="Naman Jain" className="w-72 md:w-80 lg:w-96 h-auto rounded-2xl object-cover shadow-lg" />
                 {/* Subtle decorative element */}
                 <div className="absolute -z-10 top-4 left-4 w-full h-full rounded-2xl border-2 border-primary/20" />
               </div>
@@ -50,26 +44,11 @@ const About = () => {
               </div>
 
               {/* Quick stats or highlights */}
-              <div className="mt-8 flex flex-wrap gap-6">
-                <div>
-                  <p className="text-2xl font-bold text-primary">Builder</p>
-                  <p className="text-sm text-muted-foreground">Products & Startups</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-primary">Writer</p>
-                  <p className="text-sm text-muted-foreground">Essays & Newsletters</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-primary">Operator</p>
-                  <p className="text-sm text-muted-foreground">Strategy & Execution</p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
       </section>
-    </MainLayout>
-  );
+    </MainLayout>;
 };
-
 export default About;
