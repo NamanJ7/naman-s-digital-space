@@ -8,7 +8,7 @@ const About = () => {
             {/* Left - Portrait */}
             <div className="flex justify-center md:justify-start">
               <div className="relative">
-                <img src={namanPortrait} alt="Naman Jain" className="w-72 md:w-80 lg:w-96 h-auto rounded-2xl object-cover shadow-lg" />
+                <img src={namanPortrait} alt="Naman Jain" className="w-56 md:w-64 lg:w-72 h-auto rounded-2xl object-cover shadow-lg" />
                 {/* Subtle decorative element */}
                 <div className="absolute -z-10 top-4 left-4 w-full h-full rounded-2xl border-2 border-primary/20" />
               </div>

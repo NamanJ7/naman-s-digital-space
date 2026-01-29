@@ -12,10 +12,10 @@ const Navigation = () => {
   ];
 
   const socialLinks = [
-    { href: "https://linkedin.com/in/namanjain", label: "LinkedIn" },
-    { href: "https://medium.com/@namanjain", label: "Medium" },
-    { href: "https://github.com/namanjain", label: "GitHub" },
-    { href: "https://substack.com/@namanjain", label: "Substack" },
+    { href: "https://www.linkedin.com/in/naman-jain-jain7/", label: "LinkedIn" },
+    { href: "https://medium.com/@NamanJain7", label: "Medium" },
+    { href: "https://github.com/NamanJ7", label: "GitHub" },
+    { href: "https://namanjain7.substack.com/", label: "Substack" },
   ];
 
   return (

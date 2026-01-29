@@ -23,7 +23,7 @@ const ContactSection = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    window.location.href = `mailto:naman@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:mail.namanjain7@gmail.com?subject=${subject}&body=${body}`;
 
     toast({
       title: "Opening email client...",
@@ -38,20 +38,20 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "naman@example.com",
-      href: "mailto:naman@example.com",
+      value: "mail.namanjain7@gmail.com",
+      href: "mailto:mail.namanjain7@gmail.com",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/namanjain",
-      href: "https://linkedin.com/in/namanjain",
+      value: "linkedin.com/in/naman-jain-jain7",
+      href: "https://www.linkedin.com/in/naman-jain-jain7/",
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/namanjain",
-      href: "https://github.com/namanjain",
+      value: "github.com/NamanJ7",
+      href: "https://github.com/NamanJ7",
     },
   ];
 
