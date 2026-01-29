@@ -27,7 +27,7 @@ const MindsetMarquee = () => {
         {content.map((mindset, index) => (
           <span
             key={index}
-            className="mx-8 text-2xl md:text-3xl font-bold text-primary"
+            className="mx-12 text-2xl md:text-3xl font-bold text-primary"
           >
             {mindset}
           </span>
