@@ -15,55 +15,73 @@ interface ProjectSection {
 
 const projectSections: ProjectSection[] = [
   {
-    title: "What I'm Working On Right Now",
+    title: "Currently Working On",
     projects: [
       {
-        title: "Product Manager @ Clover Labs",
+        title: "Intern @ Equintel",
         description:
-          "PM @ Clover via acquisition. Clover is one of the fastest growing startups, building verticalized AI growth agents. Working on product strategy and execution.",
-        link: "https://cloverlabs.ai",
-        linkLabel: "Clover Labs",
+          "Automating ESG materiality assessments with AI, helping organizations streamline sustainability reporting and governance at scale.",
+        link: "https://equintel.de/",
+        linkLabel: "Equintel",
       },
       {
-        title: "Building AI Software",
+        title: "Founder @ Stealth AI Startup",
         description:
-          "Currently building AI-powered tools and exploring the intersection of machine learning and practical product applications. Focused on shipping fast and iterating.",
+          "Building a revolutionary AI tool that's changing the way we work. More coming soon.",
+      },
+      {
+        title: "Alumni @ The Knowledge Society",
+        description:
+          "Part of a global community of young innovators accelerating human progress through exponential technologies and entrepreneurship.",
+        link: "https://tks.world",
+        linkLabel: "TKS",
       },
     ],
   },
   {
-    title: "What I've Done in the Past",
+    title: "What I've Done",
     projects: [
       {
-        title: "Co-founder @ Antifragility (acquired)",
+        title: "Co-founder @ AgriLanka",
         description:
-          "My first startup. Bootstrapped and scaled to six-figure ARR before getting acquired. Helped brands rank on AI, working with notable companies and YC startups.",
-        link: "https://antifragility.ai",
-        linkLabel: "Antifragility",
+          "Led agricultural innovation in Sri Lanka, combining IoT and data analytics to optimize crop yields and empower smallholder farmers.",
+        link: "https://adorable-kitsune-d82568.netlify.app/",
+        linkLabel: "AgriLanka",
       },
       {
-        title: "AI Growth Consultant @ Hypesonic",
+        title: "Intern @ BYCIG",
         description:
-          "Worked with one of the coolest AI startups backed by top-tier VCs. Helped build growth strategies and implement AI-driven marketing solutions.",
-        link: "https://hypesonic.ai",
-        linkLabel: "Hypesonic",
+          "Contributed to tech and finance innovation at a rising digital asset company.",
+        link: "https://bycig.org/",
+        linkLabel: "BYCIG",
       },
       {
         title: "Habguard AI",
         description:
-          "Working on ML models to help detect harmful algal blooms for water desalination plants. Applied machine learning for environmental impact.",
+          "Developed ML models for early detection of harmful algal blooms, protecting water desalination infrastructure and public health.",
+        link: "https://www.notion.so/HABGuard-AI-2a58dc64ada08001b01fde0a151e1308?pvs=32",
+        linkLabel: "Habguard AI",
       },
       {
-        title: "Intern @ Armilla AI",
+        title: "Frontline AI",
         description:
-          "Worked at a YC-backed AI insurance startup. Performed SEO optimization and helped with growth initiatives.",
-        link: "https://armilla.ai",
-        linkLabel: "Armilla AI",
+          "Built latency-free translation systems for crisis zones in cooperation with Cerebras wafer-scale chips, enabling real-time communication where it matters most.",
+        link: "https://www.notion.so/Frontline-AI-Latency-Free-Translation-for-Crisis-Zones-2fa10736d5d2801ca25acc28860fa39a?source=copy_link",
+        linkLabel: "Frontline AI",
       },
       {
-        title: "Movitlative",
+        title: "Intern @ AuraPatch",
         description:
-          "Charity I launched for a meaningful cause. Proud to have built something that makes a real difference in the community.",
+          "Worked on wearable health technology, developing AI-powered solutions for continuous patient monitoring.",
+        link: "https://www.linkedin.com/company/aurapatch",
+        linkLabel: "AuraPatch",
+      },
+      {
+        title: "Summer Fellow @ The Cansbridge Fellowship",
+        description:
+          "Selected for a highly renowned fellowship program connecting top high school students with entrepreneurship, innovation, and leadership development.",
+        link: "https://cansbridgefellowship.com/",
+        linkLabel: "Cansbridge Fellowship",
       },
     ],
   },
@@ -115,6 +133,22 @@ const Projects = () => {
                 <div className="mt-12 border-b border-border" />
               </div>
             ))}
+          </div>
+
+          {/* Explore more link */}
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground text-lg">
+              These are just a few highlights, click{" "}
+              <a
+                href="https://www.notion.so/Hey-I-m-Naman-Here-s-what-I-ve-Built-2f4f0fd5745f81229639f20bc15800e8?source=copy_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-primary hover:underline"
+              >
+                here
+              </a>{" "}
+              to explore more projects in depth.
+            </p>
           </div>
         </div>
       </section>

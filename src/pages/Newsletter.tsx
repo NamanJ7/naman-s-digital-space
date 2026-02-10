@@ -1,6 +1,7 @@
 import MainLayout from "@/components/MainLayout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import newsletterCover from "@/assets/newsletter-cover.png";
 
 const Newsletter = () => {
   return (
@@ -11,26 +12,20 @@ const Newsletter = () => {
             {/* Left - Newsletter info */}
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                My blog; from 0 to 0.1
+                My blog; Naman's Process: Ctrl+Alt+Reflect
               </h1>
 
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Here's where I share my essays, with monthly newsletters on 
+                  Here's where I share my essays, with monthly newsletters on
                   what I've been up to.
                 </p>
-
-                <p className="italic">(and yeah it's a play on Thiel)</p>
               </div>
 
               <div className="mt-8">
-                <Button
-                  asChild
-                  size="lg"
-                  className="text-base"
-                >
+                <Button asChild size="lg" className="text-base">
                   <a
-                    href="https://substack.com/@namanjain"
+                    href="https://namanjain7.substack.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -67,51 +62,13 @@ const Newsletter = () => {
               </div>
             </div>
 
-            {/* Right - Visual/illustration area */}
+            {/* Right - Newsletter cover image */}
             <div className="flex justify-center">
-              <div className="relative bg-secondary rounded-2xl p-8 md:p-12 w-full max-w-md">
-                <div className="text-center">
-                  <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                    MY JOURNEY
-                  </h3>
-                  <h4 className="text-2xl md:text-3xl font-bold text-primary mb-8">
-                    FROM 0 TO 0.1
-                  </h4>
-
-                  {/* Simple visual representation */}
-                  <div className="relative h-48 flex items-end justify-center">
-                    {/* Growth line visualization */}
-                    <svg
-                      viewBox="0 0 200 100"
-                      className="w-full h-full"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      {/* The journey path */}
-                      <path
-                        d="M10 90 L40 70 L60 85 L90 50 L120 75 L150 35 L190 15"
-                        stroke="hsl(158, 35%, 22%)"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        fill="none"
-                      />
-                      {/* Start point */}
-                      <circle cx="10" cy="90" r="6" fill="hsl(158, 35%, 22%)" />
-                      {/* End point */}
-                      <circle cx="190" cy="15" r="6" fill="hsl(158, 35%, 22%)" />
-                      {/* Arrow at end */}
-                      <polygon
-                        points="185,10 195,15 185,20"
-                        fill="hsl(158, 35%, 22%)"
-                      />
-                    </svg>
-                  </div>
-
-                  <p className="mt-4 text-muted-foreground text-sm">
-                    The path is never straight, but always forward.
-                  </p>
-                </div>
-              </div>
+              <img
+                src={newsletterCover}
+                alt="Naman's Process: Ctrl+Alt+Reflect"
+                className="w-full max-w-md rounded-2xl shadow-lg"
+              />
             </div>
           </div>
         </div>
