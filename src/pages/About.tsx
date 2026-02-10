@@ -16,29 +16,27 @@ const About = () => {
 
             {/* Right - Intro */}
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                I'm Naman, great to e-meet you.
-              </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Hey, I'm Naman!</h1>
               
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                <p>Great to e-meet you.
+I've been building since I could code, obsessed with using AI to solve problems that actually matter.</p>
+                
                 <p>
-                  I've been building since I could code—obsessed with using AI to solve problems that actually matter.
+                  Currently working at the intersection of AI and product, I spend my days 
+                  shipping software, writing about what I learn, and figuring out how to 
+                  make an outsized impact.
                 </p>
                 
                 <p>
-                  I've worked on everything from ML models detecting harmful algal blooms for water plants in the UAE, to latency-free translation systems for crisis zones with Cerebras chips. Saw firsthand how the right tech can save lives and industries.
-                </p>
-                
-                <p>
-                  Right now, I'm interning @ <a href="https://equintel.de/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Equintel</a> working on AI-powered ESG automation, and founding a stealth AI startup that's going to change how we work (more on that soon).
+                  I believe in first principles thinking, compounding efforts, and the power 
+                  of just getting started. Most importantly, I believe that done is better 
+                  than perfect.
                 </p>
 
                 <p>
-                  I am all about first principles thinking, compounding efforts, and the power of just getting started.
-                </p>
-
-                <p>
-                  When I'm not grinding on the startup, I'm tinkering with vertical AI tools, exploring new problem spaces, and figuring out where AI can create the most impact.
+                  When I'm not building, you'll find me reading, exploring new ideas, or 
+                  working on the next thing.
                 </p>
               </div>
 
