@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* surfaces */
+  --color-bg: #09090b;
+  --color-card: #161618;
+  --color-card-2: #1f1f23;
+  --color-card-3: #27272c;
+  --color-border: #2a2a30;
+
+  /* text */
+  --color-fg: #e9e9ed;
+  --color-muted: #8b8b94;
+
+  /* accent */
+  --color-accent: #ffce4a;
+  --color-accent-dim: #c9a23a;
+
+  /* fonts (wired to next/font CSS variables in app/layout.tsx) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #000;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  /* hide scrollbar but keep scrolling (used by the nav on small screens) */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* short gold underline used under section headings */
+  .accent-rule {
+    height: 4px;
+    width: 2.75rem;
+    border-radius: 9999px;
+    background-color: var(--color-accent);
+  }
+}
+
+/* subtle global scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-card-3) transparent;
+}
