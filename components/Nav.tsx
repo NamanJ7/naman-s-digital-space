@@ -16,7 +16,7 @@ export function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="no-scrollbar flex items-center gap-1 overflow-x-auto rounded-full border border-border bg-card/60 p-1 backdrop-blur">
+    <nav className="no-scrollbar flex items-center gap-6 overflow-x-auto border-b border-border">
       {links.map((link) => {
         const active =
           link.href === "/"
@@ -27,19 +27,19 @@ export function Nav() {
           <Link
             key={link.href}
             href={link.href}
-            className="relative shrink-0 rounded-full px-4 py-2 text-sm font-medium"
+            className="relative shrink-0 py-2.5 text-sm font-medium"
           >
             {active && (
               <motion.span
                 layoutId="nav-active"
-                className="absolute inset-0 rounded-full bg-card-2"
+                className="absolute inset-x-0 bottom-[-1px] h-px bg-accent"
                 transition={{ type: "spring", stiffness: 380, damping: 32 }}
               />
             )}
             <span
               className={cn(
                 "relative z-10 transition-colors",
-                active ? "text-accent" : "text-muted hover:text-fg",
+                active ? "text-fg" : "text-muted hover:text-fg",
               )}
             >
               {link.label}

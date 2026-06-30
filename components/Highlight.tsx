@@ -9,12 +9,12 @@ export function Highlight({ children }: { children: React.ReactNode }) {
       className="box-decoration-clone rounded-[3px] px-1 font-medium"
       style={{
         backgroundImage:
-          "linear-gradient(var(--color-accent), var(--color-accent))",
+          "linear-gradient(var(--color-highlight), var(--color-highlight))",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "left center",
       }}
-      initial={{ backgroundSize: "0% 86%", color: "inherit" }}
-      whileInView={{ backgroundSize: "100% 86%", color: "#000" }}
+      initial={{ backgroundSize: "0% 86%", color: "var(--color-fg)" }}
+      whileInView={{ backgroundSize: "100% 86%", color: "var(--color-fg)" }}
       viewport={{ once: true, margin: "-12%" }}
       transition={{ duration: 0.55, ease: "easeOut", delay: 0.05 }}
     >

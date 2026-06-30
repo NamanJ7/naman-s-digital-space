@@ -1,116 +1,66 @@
-// ---------------------------------------------------------------------------
-// EDIT ME: this file is the single source of truth for everything personal on
-// the site (name, socials, intro text, "currently up to" cards, quotes).
-// Changing content here updates every page — you shouldn't need to touch the
-// components. Projects live in content/projects.ts; blog posts in content/blog.
-// ---------------------------------------------------------------------------
-
 export type SocialPlatform = "email" | "linkedin" | "github" | "substack";
 
 export type Social = {
   platform: SocialPlatform;
-  label: string; // small uppercase label shown in the sidebar
-  display: string; // the value shown beneath the label
+  label: string;
+  display: string;
   href: string;
 };
 
-export type CurrentItem = {
-  emoji: string;
-  title: string;
-  body: string;
-};
-
-export type Quote = {
-  text: string;
-  author: string;
-};
+export type CurrentItem = { emoji: string; title: string; body: string };
+export type Quote = { text: string; author: string };
 
 export const siteConfig = {
-  name: "Your Name",
-  role: "Software Engineer",
-  tagline:
-    "Engineer, researcher, and writer. I build software, explore ideas, and share what I learn.",
-
-  // path under /public — drop in your own photo and point here (e.g. /profile.jpg)
-  profileImage: "/profile.svg",
-
-  // used as the contact-form fallback recipient and the email social link
-  email: "pjain1976@gmail.com",
-
-  // your Substack base URL (no trailing slash) — powers the subscribe box
-  substackUrl: "https://yourname.substack.com",
+  name: "Naman Jain",
+  role: "AI Builder & Software Engineer",
+  tagline: "Building AI products, writing in public, and turning early ideas into useful software.",
+  profileImage: "/naman-pfp.jpg",
+  email: "mail.namanjain7@gmail.com",
+  substackUrl: "https://namanjain7.substack.com",
 
   socials: [
-    {
-      platform: "email",
-      label: "EMAIL",
-      display: "pjain1976@gmail.com",
-      href: "mailto:pjain1976@gmail.com",
-    },
-    {
-      platform: "linkedin",
-      label: "LINKEDIN",
-      display: "Your Name",
-      href: "https://www.linkedin.com/in/your-handle/",
-    },
-    {
-      platform: "github",
-      label: "GITHUB",
-      display: "your-handle",
-      href: "https://github.com/your-handle",
-    },
-    {
-      platform: "substack",
-      label: "SUBSTACK",
-      display: "Your Newsletter",
-      href: "https://yourname.substack.com",
-    },
+    { platform: "email", label: "EMAIL", display: "mail.namanjain7@gmail.com", href: "mailto:mail.namanjain7@gmail.com" },
+    { platform: "linkedin", label: "LINKEDIN", display: "Naman Jain", href: "https://www.linkedin.com/in/naman-jain-jain7/" },
+    { platform: "github", label: "GITHUB", display: "Naman Jain", href: "https://github.com/NamanJ7" },
+    { platform: "substack", label: "SUBSTACK", display: "Naman's Process", href: "https://namanjain7.substack.com/" },
   ] satisfies Social[],
 
-  // The intro paragraphs on the About page.
-  // Wrap any phrase in ==double equals== to give it the animated gold highlight.
+  // Wrap any phrase in ==double equals== to apply the animated highlight.
   intro: [
-    "I'm a ==software engineer== who loves turning hard problems into things people can actually use. By day I build products; on the side I do ==research== and the occasional ==consulting== project.",
-    "Apart from code, I spend an obnoxious amount of time reading, tinkering with side projects, and ==spreading joy==. I believe the best work happens at the intersection of curiosity and craft.",
-    "This page is a high-level glimpse into what I'm up to — if you want the technical details, check out my portfolio.",
+    "Great to e-meet you. I've been building since I could code, obsessed with using ==AI to solve problems that actually matter==.",
+    "I'm currently building Pore, an AI skincare app that starts with a guided photo of your face, then builds a personalized routine around your products, goals, and progress.",
+    "Before this, I built AgriLanka, an agritech startup that received numerous grants, and it taught me what it actually takes to take an idea from zero to something real.",
+    "I spend my days shipping software, writing about what I learn, and figuring out how to make an outsized impact. I believe in ==first principles thinking==, compounding efforts, and the power of just getting started. Done is better than perfect.",
+    "When I'm not building, you'll find me reading, exploring new ideas, or working on the next thing.",
   ],
 
   currentlyUpTo: [
     {
-      emoji: "💼",
-      title: "Open to Work",
-      body: "Exploring new roles in software & product. If you're hiring, let's talk.",
+      emoji: "01",
+      title: "Building Pore",
+      body: "An AI skincare app that turns guided face photos, goals, and product context into personalized routines.",
     },
     {
-      emoji: "🔬",
-      title: "Research",
-      body: "Ongoing work at the intersection of machine learning and systems.",
+      emoji: "02",
+      title: "Side Projects",
+      body: "I’m always tinkering with side projects to keep sharpening my skills. Check out more of them in my portfolio.",
     },
     {
-      emoji: "🤝",
-      title: "Consulting",
-      body: "Helping early-stage teams ship faster and make sharper technical bets.",
+      emoji: "03",
+      title: "Writing in Public",
+      body: "Publishing notes on building, AI, startups, learning loops, and the process behind the process.",
     },
     {
-      emoji: "✍️",
-      title: "Writing",
-      body: "Publishing essays and notes on engineering and ideas in my newsletter.",
+      emoji: "04",
+      title: "Compounding Output",
+      body: "Shipping fast, learning faster, and stacking small wins into work that can actually matter.",
     },
   ] satisfies CurrentItem[],
 
   quotes: [
-    {
-      text: "The best way to predict the future is to invent it.",
-      author: "Alan Kay",
-    },
-    {
-      text: "Simplicity is a prerequisite for reliability.",
-      author: "Edsger W. Dijkstra",
-    },
-    {
-      text: "It is not enough to be busy; so are the ants. The question is: what are we busy about?",
-      author: "Henry David Thoreau",
-    },
+    { text: "Start before it feels ready.", author: "Operating principle" },
+    { text: "Think from first principles, then ship the scrappy version.", author: "Build philosophy" },
+    { text: "Done is better than perfect.", author: "Reminder" },
   ] satisfies Quote[],
 };
 

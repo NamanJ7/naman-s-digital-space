@@ -2,73 +2,79 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  /* surfaces */
-  --color-bg: #09090b;
-  --color-card: #161618;
-  --color-card-2: #1f1f23;
-  --color-card-3: #27272c;
-  --color-border: #2a2a30;
+  --color-bg: #f1eee7;
+  --color-card: #fbfaf7;
+  --color-card-2: #f4f1ea;
+  --color-card-3: #e9e4da;
+  --color-border: #d8d1c5;
+  --color-fg: #242621;
+  --color-muted: #77786f;
+  --color-accent: #7a5942;
+  --color-accent-dim: #9d7960;
+  --color-highlight: #ead28e;
 
-  /* text */
-  --color-fg: #e9e9ed;
-  --color-muted: #8b8b94;
-
-  /* accent */
-  --color-accent: #ffce4a;
-  --color-accent-dim: #c9a23a;
-
-  /* fonts (wired to next/font CSS variables in app/layout.tsx) */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    background-color: var(--color-bg);
+    background:
+      linear-gradient(rgba(74, 62, 48, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(74, 62, 48, 0.025) 1px, transparent 1px),
+      var(--color-bg);
+    background-size: 40px 40px;
     color: var(--color-fg);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
-  ::selection {
-    background-color: var(--color-accent);
-    color: #000;
-  }
+  ::selection { background-color: var(--color-highlight); color: var(--color-fg); }
 
-  h1,
-  h2,
-  h3,
-  h4 {
+  h1, h2, h3, h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
 }
 
+@layer components {
+  .eyebrow {
+    color: var(--color-accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-inline: 0.08rem;
+    padding: 0.16rem 0.45rem 0.16rem 0.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.55rem;
+    background: var(--color-card-2);
+    color: var(--color-fg);
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    vertical-align: baseline;
+    transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+  }
+
+  .project-link:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-1px);
+  }
+}
+
 @layer utilities {
-  /* hide scrollbar but keep scrolling (used by the nav on small screens) */
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* short gold underline used under section headings */
-  .accent-rule {
-    height: 4px;
-    width: 2.75rem;
-    border-radius: 9999px;
-    background-color: var(--color-accent);
-  }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
 }
 
-/* subtle global scrollbar styling */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-card-3) transparent;
-}
+* { scrollbar-width: thin; scrollbar-color: var(--color-card-3) transparent; }
