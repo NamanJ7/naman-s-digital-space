@@ -95,6 +95,18 @@
     transform: translateY(-1px);
   }
 
+  .project-link[data-tone="pore"] {
+    border-color: #e4cea5;
+    background: #f8f0df;
+    color: #5f5948;
+  }
+
+  .project-link[data-tone="agrilanka"] {
+    border-color: #c5dca0;
+    background: #edf6df;
+    color: #346047;
+  }
+
   .company-link {
     display: inline-flex;
     height: 2rem;
@@ -116,6 +128,16 @@
     transform: translateY(-1px);
   }
 
+  .company-link[data-tone="equintel"] {
+    border-color: #b9d7e2;
+    background: #eaf4f7;
+  }
+
+  .company-link[data-tone="bycig"] {
+    border-color: #d6d4cf;
+    background: #f1f0ed;
+  }
+
   .company-logo-crop {
     display: block;
     width: 5.5rem;
@@ -129,6 +151,7 @@
     max-width: none;
     object-fit: contain;
     transform: translateY(-2rem);
+    mix-blend-mode: multiply;
   }
 }
 

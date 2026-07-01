@@ -62,7 +62,7 @@ export default function AboutPage() {
         <div className="space-y-7 text-lg leading-[1.85] text-fg/78">
           <p>
             I&apos;m currently building{" "}
-            <ProjectLink href="https://poreai.vercel.app/" image="/pore-logo.png" name="Pore" />
+            <ProjectLink href="https://poreai.vercel.app/" image="/pore-logo.png" name="Pore" tone="pore" />
             , an AI skincare app that starts with a guided photo of your face,
             then builds a personalized routine around your products, goals, and
             progress.
@@ -73,18 +73,19 @@ export default function AboutPage() {
               href="https://adorable-kitsune-d82568.netlify.app/"
               image="/agrilanka-logo.png"
               name="AgriLanka"
+              tone="agrilanka"
             />
             , an agritech startup that received numerous grants, and it taught
             me what it actually takes to take an idea from zero to something real.
           </p>
           <p>
             Alongside building these products, I interned at{" "}
-            <CompanyLink href="https://equintel.de/" image="/equintel-logo.png" name="Equintel" />
+            <CompanyLink href="https://equintel.de/" image="/equintel-logo.png" name="Equintel" tone="equintel" />
             , where I helped develop AI software that turns unstructured company
             disclosures and market data into automated ESG assessments and
             decision-ready sustainability insights. I also worked as a financial
             analyst intern at{" "}
-            <CompanyLink href="https://bycig.org/" image="/bycig-logo.png" name="BYCIG" />
+            <CompanyLink href="https://bycig.org/" image="/bycig-logo.png" name="BYCIG" tone="bycig" />
             , supporting early-stage investment decisions through financial models,
             business-plan analysis, and concise memos on social-impact startups.
           </p>
@@ -106,9 +107,9 @@ export default function AboutPage() {
   );
 }
 
-function ProjectLink({ href, image, name }: { href: string; image: string; name: string }) {
+function ProjectLink({ href, image, name, tone }: { href: string; image: string; name: string; tone: string }) {
   return (
-    <Link href={href} target="_blank" rel="noreferrer" className="project-link">
+    <Link href={href} target="_blank" rel="noreferrer" className="project-link" data-tone={tone}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={image} alt="" className="size-6 rounded-md object-cover" />
       <span>{name}</span>
@@ -117,7 +118,7 @@ function ProjectLink({ href, image, name }: { href: string; image: string; name:
   );
 }
 
-function CompanyLink({ href, image, name }: { href: string; image: string; name: string }) {
+function CompanyLink({ href, image, name, tone }: { href: string; image: string; name: string; tone: string }) {
   return (
     <Link
       href={href}
@@ -125,6 +126,7 @@ function CompanyLink({ href, image, name }: { href: string; image: string; name:
       rel="noreferrer"
       aria-label={`${name} website`}
       className="company-link"
+      data-tone={tone}
     >
       <span className="company-logo-crop">
         {/* eslint-disable-next-line @next/next/no-img-element */}
