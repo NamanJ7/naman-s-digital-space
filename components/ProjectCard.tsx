@@ -21,18 +21,19 @@ export function ProjectCard({ project }: { project: Project }) {
           src={project.image}
           alt={project.imageAlt}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+          style={{ objectPosition: project.imagePosition ?? "center" }}
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-5">
+      <div className="flex flex-1 flex-col p-4">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{project.type}</p>
         <div className="mt-2 flex items-start justify-between gap-3">
-          <h3 className="text-2xl font-semibold tracking-[-0.035em]">{project.title}</h3>
+          <h3 className="text-xl font-semibold tracking-[-0.03em]">{project.title}</h3>
           {project.link && (
             <ArrowUpRight className="mt-1 size-5 shrink-0 text-muted transition-colors group-hover:text-accent" />
           )}
         </div>
-        <p className="mt-3 text-sm leading-7 text-fg/70">{project.description}</p>
+        <p className="mt-2.5 text-sm leading-6 text-fg/70">{project.description}</p>
       </div>
     </motion.article>
   );

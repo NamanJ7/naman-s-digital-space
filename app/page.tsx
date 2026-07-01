@@ -13,7 +13,7 @@ export default function AboutPage() {
     <div className="flex flex-col gap-20">
       <section className="grid gap-10 border-b border-border pb-14 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-end">
         <div>
-          <p className="eyebrow">AI products · startups · useful software</p>
+          <p className="eyebrow hero-eyebrow">AI products · startups · useful software</p>
           <h1 className="mt-5 max-w-3xl text-5xl font-semibold tracking-[-0.055em] text-fg sm:text-6xl lg:text-7xl">
             Hey, I&apos;m Naman!
           </h1>
