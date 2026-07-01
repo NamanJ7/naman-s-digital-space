@@ -70,6 +70,42 @@
     color: var(--color-accent);
     transform: translateY(-1px);
   }
+
+  .company-link {
+    display: inline-flex;
+    height: 2rem;
+    align-items: center;
+    gap: 0.15rem;
+    margin-inline: 0.08rem;
+    padding: 0.15rem 0.35rem;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 0.55rem;
+    background: #fff;
+    color: var(--color-muted);
+    vertical-align: middle;
+    transition: border-color 160ms ease, transform 160ms ease;
+  }
+
+  .company-link:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+  }
+
+  .company-logo-crop {
+    display: block;
+    width: 5.5rem;
+    height: 1.55rem;
+    overflow: hidden;
+  }
+
+  .company-logo-crop img {
+    width: 5.5rem;
+    height: 5.5rem;
+    max-width: none;
+    object-fit: contain;
+    transform: translateY(-2rem);
+  }
 }
 
 @layer utilities {

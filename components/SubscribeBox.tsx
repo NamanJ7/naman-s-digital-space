@@ -13,7 +13,15 @@ const topics = [
 export function SubscribeBox() {
   return (
     <section className="overflow-hidden rounded-[1.35rem] border border-border bg-card-2 p-6 sm:p-8">
-      <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
+      <div className="grid gap-6 sm:grid-cols-[148px_1fr] sm:items-center">
+        <div className="overflow-hidden rounded-[1.15rem] border border-[#264c70] bg-[#193857] shadow-[0_12px_30px_rgba(25,56,87,0.18)]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/namans-process.png"
+            alt="Naman's Process — Ctrl+Alt+Reflect"
+            className="aspect-square w-full object-cover"
+          />
+        </div>
         <div>
           <div className="flex items-center gap-2 text-accent">
             <SubstackIcon className="size-4" />
@@ -27,15 +35,16 @@ export function SubscribeBox() {
           </p>
         </div>
 
-        <ul className="space-y-3">
+      </div>
+
+      <ul className="mt-7 grid gap-x-8 gap-y-3 border-t border-border pt-6 sm:grid-cols-2">
           {topics.map((topic) => (
             <li key={topic} className="flex gap-3 text-sm leading-6 text-fg/80">
               <Check className="mt-1 size-4 shrink-0 text-accent" />
               <span>{topic}</span>
             </li>
           ))}
-        </ul>
-      </div>
+      </ul>
 
       <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs text-muted">Thoughtful notes, sent when there&apos;s something worth sharing.</p>

@@ -77,6 +77,17 @@ export default function AboutPage() {
             , an agritech startup that received numerous grants, and it taught
             me what it actually takes to take an idea from zero to something real.
           </p>
+          <p>
+            Alongside building these products, I interned at{" "}
+            <CompanyLink href="https://equintel.de/" image="/equintel-logo.png" name="Equintel" />
+            , where I helped develop AI software that turns unstructured company
+            disclosures and market data into automated ESG assessments and
+            decision-ready sustainability insights. I also worked as a financial
+            analyst intern at{" "}
+            <CompanyLink href="https://bycig.org/" image="/bycig-logo.png" name="BYCIG" />
+            , supporting early-stage investment decisions through financial models,
+            business-plan analysis, and concise memos on social-impact startups.
+          </p>
           <p><Highlighted text={philosophy} /></p>
           <p><Highlighted text={offHours} /></p>
         </div>
@@ -101,6 +112,24 @@ function ProjectLink({ href, image, name }: { href: string; image: string; name:
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={image} alt="" className="size-6 rounded-md object-cover" />
       <span>{name}</span>
+      <ArrowRight className="size-3.5 -rotate-45 opacity-55" />
+    </Link>
+  );
+}
+
+function CompanyLink({ href, image, name }: { href: string; image: string; name: string }) {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`${name} website`}
+      className="company-link"
+    >
+      <span className="company-logo-crop">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={image} alt={name} />
+      </span>
       <ArrowRight className="size-3.5 -rotate-45 opacity-55" />
     </Link>
   );
