@@ -1,4 +1,4 @@
-export type SocialPlatform = "email" | "linkedin" | "github" | "substack";
+export type SocialPlatform = "email" | "linkedin" | "github" | "substack" | "medium" | "twitter";
 
 export type Social = {
   platform: SocialPlatform;
@@ -23,6 +23,8 @@ export const siteConfig = {
     { platform: "linkedin", label: "LINKEDIN", display: "Naman Jain", href: "https://www.linkedin.com/in/naman-jain-jain7/" },
     { platform: "github", label: "GITHUB", display: "Naman Jain", href: "https://github.com/NamanJ7" },
     { platform: "substack", label: "SUBSTACK", display: "Naman's Process", href: "https://namanjain7.substack.com/" },
+    { platform: "medium", label: "MEDIUM", display: "Naman Jain", href: "https://medium.com/@NamanJain7" },
+    { platform: "twitter", label: "X / TWITTER", display: "Naman Jain", href: "https://x.com/NamanJ_7" },
   ] satisfies Social[],
 
   // Wrap any phrase in ==double equals== to apply the animated highlight.

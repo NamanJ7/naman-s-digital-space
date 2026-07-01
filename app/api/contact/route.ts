@@ -25,18 +25,19 @@ export async function POST(req: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL || siteConfig.email;
+  const to = siteConfig.email;
   const from = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
 
-  // Dev fallback: with no API key configured, log instead of sending so the
-  // form is still testable locally.
+  // When email delivery is not configured, open a fully addressed draft in
+  // the visitor's mail app instead of claiming a message was delivered.
   if (!apiKey) {
-    console.log("[contact] (no RESEND_API_KEY set) new message:", {
-      name,
-      email,
-      message,
+    const subject = encodeURIComponent(`Website message from ${name}`);
+    const text = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
+    return NextResponse.json({
+      ok: true,
+      delivered: false,
+      mailto: `mailto:${siteConfig.email}?subject=${subject}&body=${text}`,
     });
-    return NextResponse.json({ ok: true, delivered: false });
   }
 
   try {

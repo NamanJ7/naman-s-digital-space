@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import type { ComponentType } from "react";
 import { siteConfig, type SocialPlatform } from "@/site.config";
-import { SubstackIcon } from "@/components/icons";
+import { MediumIcon, SubstackIcon, XIcon } from "@/components/icons";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ContactForm } from "@/components/ContactForm";
 
@@ -12,6 +12,8 @@ const iconMap: Record<SocialPlatform, ComponentType<{ className?: string }>> = {
   linkedin: Linkedin,
   github: Github,
   substack: SubstackIcon,
+  medium: MediumIcon,
+  twitter: XIcon,
 };
 
 export const metadata: Metadata = {
@@ -25,7 +27,10 @@ export default function ContactPage() {
       <SectionHeading>Contact</SectionHeading>
       <p className="mt-4 max-w-2xl text-muted">
         Have a question, an idea, or just want to say hi? Drop me a message
-        below, or reach out on any of these.
+        below, or reach out directly at{" "}
+        <Link className="font-medium text-accent hover:underline" href={`mailto:${siteConfig.email}`}>
+          {siteConfig.email}
+        </Link>.
       </p>
 
       <div className="mt-8 grid gap-10 lg:grid-cols-[1.4fr_1fr]">

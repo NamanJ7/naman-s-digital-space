@@ -5,8 +5,8 @@ import { BlogCard } from "@/components/BlogCard";
 import { SubscribeBox } from "@/components/SubscribeBox";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Essays, notes, and my newsletter.",
+  title: "Writing",
+  description: "Essays, field notes, and Naman's Process newsletter.",
 };
 
 export default function BlogPage() {
@@ -14,21 +14,22 @@ export default function BlogPage() {
 
   return (
     <div>
-      <SectionHeading>Blog</SectionHeading>
+      <SectionHeading>Writing</SectionHeading>
       <p className="mt-4 max-w-2xl text-muted">
-        Essays and notes on engineering, research, and ideas worth chasing.
+        Essays, field notes, and the thinking behind what I&apos;m building.
       </p>
 
-      <div className="mt-8">
-        <SubscribeBox />
-      </div>
+      <div className="mt-8"><SubscribeBox /></div>
 
-      <div className="mt-8 flex flex-col gap-4">
-        {posts.length === 0 ? (
-          <p className="text-muted">No posts yet — check back soon.</p>
-        ) : (
-          posts.map((post) => <BlogCard key={post.slug} post={post} />)
-        )}
+      <div className="mt-14">
+        <p className="eyebrow">Latest essays</p>
+        <div className="mt-5 flex flex-col gap-4">
+          {posts.length === 0 ? (
+            <p className="text-muted">No posts yet — check back soon.</p>
+          ) : (
+            posts.map((post) => <BlogCard key={post.slug} post={post} />)
+          )}
+        </div>
       </div>
     </div>
   );

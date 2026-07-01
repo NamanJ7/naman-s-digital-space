@@ -1,51 +1,54 @@
-"use client";
-
-import { useState } from "react";
-import { Mail } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, Check } from "lucide-react";
 import { siteConfig } from "@/site.config";
+import { SubstackIcon } from "@/components/icons";
+
+const topics = [
+  "Honest lessons from building AI products and startups",
+  "First-principles breakdowns of product and business decisions",
+  "Experiments, mistakes, and the systems I use to keep shipping",
+  "Ideas on leverage, long-term thinking, and meaningful impact",
+];
 
 export function SubscribeBox() {
-  const [email, setEmail] = useState("");
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const base = siteConfig.substackUrl.replace(/\/$/, "");
-    const target = email
-      ? `${base}/subscribe?email=${encodeURIComponent(email)}`
-      : `${base}/subscribe`;
-    window.open(target, "_blank", "noopener,noreferrer");
-  }
-
   return (
-    <div className="overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/10 to-transparent p-6 sm:p-7">
-      <div className="flex items-center gap-2 text-accent">
-        <Mail className="size-5" />
-        <span className="text-sm font-semibold tracking-wide">NEWSLETTER</span>
+    <section className="overflow-hidden rounded-[1.35rem] border border-border bg-card-2 p-6 sm:p-8">
+      <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
+        <div>
+          <div className="flex items-center gap-2 text-accent">
+            <SubstackIcon className="size-4" />
+            <span className="eyebrow">Naman&apos;s Process</span>
+          </div>
+          <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+            Notes from inside the build.
+          </h2>
+          <p className="mt-4 max-w-xl text-sm leading-7 text-muted">
+            A practical newsletter about building, thinking, and becoming more effective—written while I&apos;m doing the work.
+          </p>
+        </div>
+
+        <ul className="space-y-3">
+          {topics.map((topic) => (
+            <li key={topic} className="flex gap-3 text-sm leading-6 text-fg/80">
+              <Check className="mt-1 size-4 shrink-0 text-accent" />
+              <span>{topic}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-      <h3 className="mt-3 text-xl font-bold">Subscribe to my newsletter</h3>
-      <p className="mt-1.5 text-sm text-muted">
-        New essays and notes, straight to your inbox. No spam, unsubscribe
-        anytime.
-      </p>
-      <form
-        onSubmit={handleSubmit}
-        className="mt-4 flex flex-col gap-2.5 sm:flex-row"
-      >
-        <input
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
-          className="min-w-0 flex-1 rounded-full border border-border bg-card px-4 py-2.5 text-sm outline-none placeholder:text-muted focus:border-accent/60"
-        />
-        <button
-          type="submit"
-          className="shrink-0 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-black transition-transform hover:scale-[1.03]"
+
+      <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xs text-muted">Thoughtful notes, sent when there&apos;s something worth sharing.</p>
+        <Link
+          href={`${siteConfig.substackUrl.replace(/\/$/, "")}/subscribe`}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-dim"
         >
-          Subscribe
-        </button>
-      </form>
-    </div>
+          Subscribe to my newsletter
+          <ArrowUpRight className="size-4" />
+        </Link>
+      </div>
+    </section>
   );
 }

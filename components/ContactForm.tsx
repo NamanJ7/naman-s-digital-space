@@ -40,9 +40,16 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
 
+      const body = await res.json().catch(() => ({}));
+
       if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
         throw new Error(body.error ?? "Something went wrong.");
+      }
+
+      if (body.delivered === false && body.mailto) {
+        setStatus("idle");
+        window.location.href = body.mailto;
+        return;
       }
 
       setStatus("success");

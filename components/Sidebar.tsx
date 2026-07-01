@@ -2,13 +2,15 @@ import Link from "next/link";
 import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import type { ComponentType } from "react";
 import { siteConfig, type SocialPlatform } from "@/site.config";
-import { SubstackIcon } from "@/components/icons";
+import { MediumIcon, SubstackIcon, XIcon } from "@/components/icons";
 
 const iconMap: Record<SocialPlatform, ComponentType<{ className?: string }>> = {
   email: Mail,
   linkedin: Linkedin,
   github: Github,
   substack: SubstackIcon,
+  medium: MediumIcon,
+  twitter: XIcon,
 };
 
 export function Sidebar() {
