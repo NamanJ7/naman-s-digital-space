@@ -1,47 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Pin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/content/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   const card = (
-    <motion.div
+    <motion.article
       layout
-      initial={{ opacity: 0, scale: 0.92 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.92 }}
-      transition={{ duration: 0.25, ease: "easeOut" }}
-      whileHover={{ y: -6 }}
-      className="group flex h-full flex-col"
+      initial={{ opacity: 0, y: 14 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 10 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      whileHover={{ y: -4 }}
+      className="group flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-border bg-card-2/65 transition-[border-color,box-shadow] hover:border-accent/40 hover:shadow-[0_16px_35px_rgba(66,54,42,0.09)]"
     >
-      <div
-        className="grid aspect-[4/3] place-items-center rounded-2xl border border-border transition-shadow group-hover:shadow-lg group-hover:shadow-black/30"
-        style={{ backgroundColor: project.bgColor }}
-      >
-        <span className="text-6xl drop-shadow-sm">{project.emoji}</span>
+      <div className="aspect-video overflow-hidden border-b border-border bg-card-3">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={project.image}
+          alt={project.imageAlt}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+        />
       </div>
-      <div className="mt-4">
-        <h3 className="flex items-center gap-1.5 text-lg font-semibold">
-          <Pin className="size-4 -rotate-45 text-accent" />
-          <span className="transition-colors group-hover:text-accent">
-            {project.title}
-          </span>
-        </h3>
-        <p className="mt-0.5 text-sm text-muted">{project.type}</p>
-        <p className="mt-2 text-sm leading-relaxed text-fg/70">
-          {project.description}
-        </p>
+
+      <div className="flex flex-1 flex-col p-5">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{project.type}</p>
+        <div className="mt-2 flex items-start justify-between gap-3">
+          <h3 className="text-2xl font-semibold tracking-[-0.035em]">{project.title}</h3>
+          {project.link && (
+            <ArrowUpRight className="mt-1 size-5 shrink-0 text-muted transition-colors group-hover:text-accent" />
+          )}
+        </div>
+        <p className="mt-3 text-sm leading-7 text-fg/70">{project.description}</p>
       </div>
-    </motion.div>
+    </motion.article>
   );
 
   if (project.link) {
     return (
-      <a href={project.link} target="_blank" rel="noreferrer" className="block">
+      <a href={project.link} target="_blank" rel="noreferrer" className="block h-full">
         {card}
       </a>
     );
   }
+
   return card;
 }

@@ -8,11 +8,16 @@ import { ProjectCard } from "@/components/ProjectCard";
 
 type Filter = ProjectCategory | "all";
 
+const categoryLabels: Record<ProjectCategory, string> = {
+  software: "Software",
+  research: "Research",
+  consulting: "Consulting",
+};
+
+const availableCategories = Array.from(new Set(projects.map((project) => project.category)));
 const filters: { key: Filter; label: string }[] = [
   { key: "all", label: "All" },
-  { key: "software", label: "Software" },
-  { key: "research", label: "Research" },
-  { key: "consulting", label: "Consulting" },
+  ...availableCategories.map((category) => ({ key: category, label: categoryLabels[category] })),
 ];
 
 export function PortfolioGrid() {
@@ -55,7 +60,7 @@ export function PortfolioGrid() {
       {/* Grid */}
       <motion.div
         layout
-        className="mt-8 grid grid-cols-1 gap-x-6 gap-y-9 sm:grid-cols-2 lg:grid-cols-3"
+        className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
       >
         <AnimatePresence mode="popLayout">
           {shown.map((project) => (

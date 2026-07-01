@@ -15,7 +15,7 @@ const iconMap: Record<SocialPlatform, ComponentType<{ className?: string }>> = {
 
 export function Sidebar() {
   return (
-    <aside className="grid w-full shrink-0 grid-cols-[120px_minmax(0,1fr)] items-start gap-5 md:sticky md:top-8 md:block md:h-fit md:w-[300px]">
+    <aside className="grid w-full shrink-0 grid-cols-[120px_minmax(0,1fr)] items-start gap-5 pb-8 md:sticky md:top-8 md:block md:h-fit md:w-[300px] md:pb-10">
       <div className="overflow-hidden rounded-[1rem] border border-border bg-card p-1.5 shadow-[0_14px_45px_rgba(34,31,25,0.08)] md:rounded-[1.25rem] md:p-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -31,7 +31,7 @@ export function Sidebar() {
         <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2 text-[11px] text-muted md:mt-5 md:gap-x-4 md:text-xs">
           <span className="font-semibold text-accent">{siteConfig.role}</span>
           <span className="inline-flex items-center gap-1">
-            <MapPin className="size-3" /> Canada
+            <MapPin className="size-3" /> Toronto, Canada
           </span>
         </div>
       </div>
