@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" data-scroll-behavior="smooth" className={`${sans.variable} ${display.variable}`}>
       <body className="min-h-screen bg-bg font-sans text-fg antialiased">
         <div>
-          <div className="mx-auto flex min-h-screen max-w-[1380px] flex-col gap-8 p-4 sm:p-6 md:flex-row md:gap-10 md:p-8 lg:gap-14 lg:p-12">
+          <div className="mx-auto flex max-w-[1380px] flex-col gap-8 px-4 pt-4 sm:px-6 sm:pt-6 md:flex-row md:items-start md:gap-10 md:px-8 md:pt-8 lg:gap-14 lg:px-12 lg:pt-12">
             <Sidebar />
             <main className="flex min-w-0 flex-1 flex-col rounded-[1.5rem] border border-border bg-card p-6 shadow-[0_18px_70px_rgba(34,31,25,0.07)] sm:p-9 md:p-10 lg:p-14">
               <div className="mb-14 flex justify-start md:justify-end"><Nav /></div>
