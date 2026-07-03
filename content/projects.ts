@@ -175,4 +175,64 @@ export const projects: Project[] = [
     imageAlt: "Shell SAR verification pitch deck cover",
     link: "https://drive.google.com/file/d/1Z_KYu2EVH5zCUIeFTzN3Jbu08HEnxh-w/view",
   },
+  {
+    title: "Childhood Trauma, Epigenetics & FTD",
+    category: "research",
+    type: "Neuroscience Research Proposal",
+    description:
+      "Investigating whether childhood trauma leaves epigenetic marks on HPA-axis genes that shape stress circuitry and vulnerability in frontotemporal dementia.",
+    image: "/research-trauma-epigenetics.png",
+    imageAlt: "Brain imaging and methylation data comparing clinical groups",
+    link: "https://drive.google.com/file/d/1A1Flwfp1nBME12rhcATRlhkRusRe_E7g/view?usp=sharing",
+  },
+  {
+    title: "From LiDAR to Autonomy",
+    category: "research",
+    type: "Autonomous Vehicle Research",
+    description:
+      "A practical look at lidar, perception, neural networks, and vehicle-to-everything systems, plus the limits still keeping drivers in the loop.",
+    image: "/research-self-driving.png",
+    imageAlt: "A self-driving vehicle interface visualizing the road ahead",
+    link: "https://medium.com/@NamanJain7/shaping-our-future-self-driving-technologies-2ce10b7a6c4c",
+  },
+  {
+    title: "The Latency of Language Is Costing Lives",
+    category: "research",
+    type: "Crisis Translation Research",
+    description:
+      "How Frontline replaces stop-and-wait translation with sub-200ms simultaneous interpretation, reclaiming critical minutes in crisis triage.",
+    image: "/research-language-latency.png",
+    imageAlt: "A clinician treating patients in a humanitarian crisis setting",
+    link: "https://medium.com/@NamanJain7/the-latency-of-language-is-costing-lives-90f1f9b0eb73?postPublishedType=repub",
+  },
+  {
+    title: "The Cachexia-Neurodegeneration Axis",
+    category: "research",
+    type: "Lewy Body Dementia Proposal",
+    description:
+      "Examining how systemic wasting and inflammatory mediators may accelerate neurodegeneration in Lewy body dementia.",
+    image: "/research-cachexia-neurodegeneration.png",
+    imageAlt: "Diagram of inflammatory pathways and neuronal damage in the brain",
+    link: "https://drive.google.com/file/d/1T-voQrMsmIwok0K6cfG9hldLBag-4yvL/view?usp=sharing",
+  },
+  {
+    title: "AI Navigators for Global Justice",
+    category: "research",
+    type: "Access-to-Justice Research",
+    description:
+      "A case for mobile-first legal AI that turns eviction notices and wage disputes into plain-language rights, deadlines, and next steps.",
+    image: "/research-ai-justice.png",
+    imageAlt: "A robotic hand beside scales of justice",
+    link: "https://medium.com/@NamanJain7/ai-navigators-may-be-the-future-of-global-justice-dd9a40eeaf33",
+  },
+  {
+    title: "AgriLanka's Masterplan",
+    category: "research",
+    type: "Agricultural Systems Strategy",
+    description:
+      "A blueprint for giving African smallholder farmers affordable tools, financing, and market access through cooperative infrastructure built to scale.",
+    image: "/research-agrilanka-masterplan.png",
+    imageAlt: "Two smallholder farmers tending a young tree",
+    link: "https://medium.com/@NamanJain7/agrimalawis-masterplan-60b5036c842d",
+  },
 ];

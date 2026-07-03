@@ -21,12 +21,44 @@ const filters: { key: Filter; label: string }[] = [
   { key: "pitch-decks", label: categoryLabels["pitch-decks"] },
 ];
 
+const allProjectOrder = [
+  "software:Pore",
+  "research:The Latency of Language Is Costing Lives",
+  "pitch-decks:Galaxy Focus",
+  "software:MapleLex",
+  "research:AI Navigators for Global Justice",
+  "software:HABGuard AI",
+  "pitch-decks:IKEA Recommerce",
+  "research:From LiDAR to Autonomy",
+  "software:Frontline AI",
+  "pitch-decks:AgriLanka",
+  "research:Childhood Trauma, Epigenetics & FTD",
+  "software:CalmFocus",
+  "pitch-decks:AI Judicial Navigator",
+  "research:The Cachexia-Neurodegeneration Axis",
+  "software:IKEA Marketplace",
+  "pitch-decks:MapleLex LLM",
+  "research:AgriLanka's Masterplan",
+  "software:AutoPilot GPT",
+  "pitch-decks:Shell SAR Verification",
+  "software:Mini Autonomous Vehicle",
+  "software:Self-Driving Simulation",
+  "software:AgriLanka",
+];
+
+const allProjectRanks = new Map(allProjectOrder.map((key, index) => [key, index]));
+const allProjects = [...projects].sort((a, b) => {
+  const aRank = allProjectRanks.get(`${a.category}:${a.title}`) ?? Number.MAX_SAFE_INTEGER;
+  const bRank = allProjectRanks.get(`${b.category}:${b.title}`) ?? Number.MAX_SAFE_INTEGER;
+  return aRank - bRank;
+});
+
 export function PortfolioGrid() {
   const [active, setActive] = useState<Filter>("all");
 
   const shown =
     active === "all"
-      ? projects
+      ? allProjects
       : projects.filter((project) => project.category === active);
 
   return (
