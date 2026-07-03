@@ -3,8 +3,6 @@ import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/site.config";
 import { Highlighted } from "@/components/Highlight";
 import { SectionHeading } from "@/components/SectionHeading";
-import { CurrentlyUpTo } from "@/components/CurrentlyUpTo";
-import { Quotes } from "@/components/Quotes";
 
 export default function AboutPage() {
   const [opening, , , philosophy, offHours] = siteConfig.intro;
@@ -94,15 +92,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section>
-        <SectionHeading>What I&apos;m focused on</SectionHeading>
-        <div className="mt-7"><CurrentlyUpTo /></div>
-      </section>
-
-      <section>
-        <SectionHeading>Operating Principles</SectionHeading>
-        <div className="mt-7"><Quotes /></div>
-      </section>
     </div>
   );
 }

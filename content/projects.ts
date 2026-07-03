@@ -105,4 +105,74 @@ export const projects: Project[] = [
     imageAlt: "Top-down environment from a self-driving car simulation",
     link: "https://github.com/NamanJ7/self-driving_car-automation",
   },
+  {
+    title: "AgriLanka",
+    category: "software",
+    type: "Climate-Resilient AgTech",
+    description:
+      "Offline-first agritech that gives smallholder farmers solar irrigation and biomass tools through a cooperative, pay-as-you-harvest model.",
+    image: "/agrilanka-software.png",
+    imageAlt: "A smallholder farmer tending crops in a rural field",
+    link: "https://adorable-kitsune-d82568.netlify.app/",
+  },
+  {
+    title: "Galaxy Focus",
+    category: "pitch-decks",
+    type: "Winning Samsung Pitch Deck",
+    description:
+      "The winning strategy behind an AI smartwatch ecosystem that helps neurodivergent users regulate sensory input and stay focused.",
+    image: "/deck-samsung.png",
+    imageAlt: "Samsung Galaxy Focus pitch deck cover",
+    link: "https://drive.google.com/file/d/1AWHjAiEsUoUZLDAZ2xnkEPN93T0d42bg/view",
+  },
+  {
+    title: "IKEA Recommerce",
+    category: "pitch-decks",
+    type: "Semi-Finalist IKEA Pitch Deck",
+    description:
+      "A recommerce strategy for winning Gen Z loyalty by making pre-loved IKEA furniture easier to buy and resell.",
+    image: "/deck-ikea.png",
+    imageAlt: "IKEA recommerce pitch deck cover",
+    link: "https://drive.google.com/file/d/1WntEV-T-oqZyWzqobh4ImpsTFtU92c0r/view",
+  },
+  {
+    title: "AgriLanka",
+    category: "pitch-decks",
+    type: "AgTech Venture Deck",
+    description:
+      "A stage-tested vision for affordable, climate-resilient farming, presented to more than 400 people at Toronto's Bluma Appel Theatre.",
+    image: "/deck-agrilanka.png",
+    imageAlt: "Farmers working together in a field",
+    link: "https://drive.google.com/file/d/1uth8CFxPcegx8yBrps0ZwKoSfuM-M2sy/view",
+  },
+  {
+    title: "AI Judicial Navigator",
+    category: "pitch-decks",
+    type: "Legal AI Pitch Deck",
+    description:
+      "A legal AI concept that reads complex documents, explains their meaning, and turns them into clear next steps for everyday users.",
+    image: "/deck-judicial-navigator.png",
+    imageAlt: "A judge's gavel resting on a computer keyboard",
+    link: "https://drive.google.com/file/d/1g4m_KQT8lSijyyVBAZstoMjCn3JyKOUO/view",
+  },
+  {
+    title: "MapleLex LLM",
+    category: "pitch-decks",
+    type: "Legal Research Pitch Deck",
+    description:
+      "An Ontario legal research assistant that delivers fast, cited answers grounded in legislation, presented to investors and technology leaders.",
+    image: "/deck-maplelex.png",
+    imageAlt: "Google, OpenAI, and legal gavel imagery for the MapleLex pitch",
+    link: "https://docs.google.com/presentation/d/1D3Yg6iZZN5pSKE8OvsRtm3mKhBxUJLISUq35__Jx0tA/edit?usp=sharing",
+  },
+  {
+    title: "Shell SAR Verification",
+    category: "pitch-decks",
+    type: "Climate Technology Pitch Deck",
+    description:
+      "An automated SAR verification system designed to protect Shell's Philippines rice project and unlock a $500M nature-based solutions portfolio.",
+    image: "/deck-shell.png",
+    imageAlt: "Shell SAR verification pitch deck cover",
+    link: "https://drive.google.com/file/d/1Z_KYu2EVH5zCUIeFTzN3Jbu08HEnxh-w/view",
+  },
 ];
