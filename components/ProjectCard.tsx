@@ -6,13 +6,7 @@ import type { Project } from "@/content/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   const card = (
-    <motion.article
-      layout
-      initial={{ opacity: 0, y: 14 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 10 }}
-      transition={{ duration: 0.35, ease: "easeOut" }}
-      whileHover={{ y: -4 }}
+    <article
       className="group flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-border bg-card-2/65 transition-[border-color,box-shadow] hover:border-accent/40 hover:shadow-[0_16px_35px_rgba(66,54,42,0.09)]"
     >
       <div className="aspect-video overflow-hidden border-b border-border bg-card-3">
@@ -35,16 +29,35 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <p className="mt-2.5 text-sm leading-6 text-fg/70">{project.description}</p>
       </div>
-    </motion.article>
+    </article>
   );
+
+  const motionProps = {
+    layout: true,
+    initial: { opacity: 0, y: 14 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 10 },
+    transition: { duration: 0.35, ease: "easeOut" as const },
+    whileHover: { y: -4 },
+  };
 
   if (project.link) {
     return (
-      <a href={project.link} target="_blank" rel="noreferrer" className="block h-full">
+      <motion.a
+        {...motionProps}
+        href={project.link}
+        target="_blank"
+        rel="noreferrer"
+        className="block h-full"
+      >
         {card}
-      </a>
+      </motion.a>
     );
   }
 
-  return card;
+  return (
+    <motion.div {...motionProps} className="h-full">
+      {card}
+    </motion.div>
+  );
 }

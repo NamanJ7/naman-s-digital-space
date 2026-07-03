@@ -1,4 +1,4 @@
-export type ProjectCategory = "software" | "research" | "consulting";
+export type ProjectCategory = "software" | "research" | "pitch-decks";
 
 export type Project = {
   title: string;
@@ -52,5 +52,57 @@ export const projects: Project[] = [
     imageAlt: "Frontline AI voice translation interface powered by Cerebras",
     imagePosition: "top",
     link: "https://app.notion.com/p/Frontline-AI-Latency-Free-Translation-for-Crisis-Zones-2fa10736d5d2801ca25acc28860fa39a",
+  },
+  {
+    title: "CalmFocus",
+    category: "software",
+    type: "Samsung Competition Winner",
+    description:
+      "A Samsung One UI companion that predicts focus windows, fatigue, and stress, winning a global consulting competition.",
+    image: "/samsung-calm-focus.png",
+    imageAlt: "CalmFocus dashboard showing predicted focus, fatigue, and stress windows",
+    imagePosition: "top",
+    link: "https://calmfocus-helper.vercel.app/",
+  },
+  {
+    title: "IKEA Marketplace",
+    category: "software",
+    type: "IKEA Competition Semi-Finalist",
+    description:
+      "A circular marketplace for buying and reselling pre-loved IKEA furniture, selected from more than 1,000 submissions.",
+    image: "/ikea-marketplace.png",
+    imageAlt: "IKEA marketplace for buying and selling pre-loved furniture",
+    imagePosition: "top",
+    link: "https://ikeaprototype-2wwbbtss5-noahcom-stars-projects.vercel.app/",
+  },
+  {
+    title: "AutoPilot GPT",
+    category: "software",
+    type: "AI Navigation",
+    description:
+      "An AI navigation app that adapts routes for traffic, accidents, and weather, with smarter toll-free alternatives.",
+    image: "/autopilot-gpt.png",
+    imageAlt: "Navigation screen mounted on a car dashboard",
+    link: "https://github.com/NamanJ7/AutoPilot-GPT",
+  },
+  {
+    title: "Mini Autonomous Vehicle",
+    category: "software",
+    type: "Robotics & Computer Vision",
+    description:
+      "A Python-and-Arduino vehicle that reacts to traffic lights, avoids obstacles, and mirrors real-world self-driving logic.",
+    image: "/mini-autonomous-vehicle.png",
+    imageAlt: "Autonomous vehicle sensing cars and pedestrians in a city",
+    link: "https://www.youtube.com/watch?v=lLfGyPakYnU",
+  },
+  {
+    title: "Self-Driving Simulation",
+    category: "software",
+    type: "Autonomous Systems",
+    description:
+      "A 2D simulation that models lidar-like sensing, perception, and decision-making to navigate around obstacles.",
+    image: "/self-driving-simulation.png",
+    imageAlt: "Top-down environment from a self-driving car simulation",
+    link: "https://github.com/NamanJ7/self-driving_car-automation",
   },
 ];

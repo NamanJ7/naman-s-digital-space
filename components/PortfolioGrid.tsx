@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { projects, type ProjectCategory } from "@/content/projects";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -11,13 +11,14 @@ type Filter = ProjectCategory | "all";
 const categoryLabels: Record<ProjectCategory, string> = {
   software: "Software",
   research: "Research",
-  consulting: "Consulting",
+  "pitch-decks": "Pitch Decks",
 };
 
-const availableCategories = Array.from(new Set(projects.map((project) => project.category)));
 const filters: { key: Filter; label: string }[] = [
   { key: "all", label: "All" },
-  ...availableCategories.map((category) => ({ key: category, label: categoryLabels[category] })),
+  { key: "software", label: categoryLabels.software },
+  { key: "research", label: categoryLabels.research },
+  { key: "pitch-decks", label: categoryLabels["pitch-decks"] },
 ];
 
 export function PortfolioGrid() {
@@ -62,11 +63,9 @@ export function PortfolioGrid() {
         layout
         className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
       >
-        <AnimatePresence mode="popLayout">
-          {shown.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </AnimatePresence>
+        {shown.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
       </motion.div>
 
       {shown.length === 0 && (
