@@ -54,13 +54,13 @@ export const projects: Project[] = [
     link: "https://app.notion.com/p/Frontline-AI-Latency-Free-Translation-for-Crisis-Zones-2fa10736d5d2801ca25acc28860fa39a",
   },
   {
-    title: "CalmFocus",
+    title: "Galaxy Focus",
     category: "software",
     type: "Samsung Competition Winner",
     description:
       "A Samsung One UI companion that predicts focus windows, fatigue, and stress, winning a global consulting competition.",
     image: "/samsung-calm-focus.png",
-    imageAlt: "CalmFocus dashboard showing predicted focus, fatigue, and stress windows",
+    imageAlt: "Galaxy Focus dashboard showing predicted focus, fatigue, and stress windows",
     imagePosition: "top",
     link: "https://calmfocus-helper.vercel.app/",
   },
@@ -74,6 +74,17 @@ export const projects: Project[] = [
     imageAlt: "IKEA marketplace for buying and selling pre-loved furniture",
     imagePosition: "top",
     link: "https://ikeaprototype-2wwbbtss5-noahcom-stars-projects.vercel.app/",
+  },
+  {
+    title: "Memoir",
+    category: "software",
+    type: "Cognitive Care Tool",
+    description:
+      "Memoir helps families create personalized memory games and flashcards that turn cognitive practice into a warmer, more connected daily ritual.",
+    image: "/memoir.png",
+    imageAlt: "Memoir dashboard showing weekly progress and brain training activities",
+    imagePosition: "top",
+    link: "https://memoirapp.online/",
   },
   {
     title: "AutoPilot GPT",
