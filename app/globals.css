@@ -133,6 +133,13 @@
     background: #eaf4f7;
   }
 
+  .company-link[data-tone="mason"] {
+    border-color: #f0c4a5;
+    background:
+      radial-gradient(circle at 92% 50%, rgba(255, 127, 45, 0.34), transparent 48%),
+      linear-gradient(90deg, #f8eee7 0%, #f7e7dc 58%, #ffe0c9 100%);
+  }
+
   .company-link[data-tone="bycig"] {
     border-color: #d6d4cf;
     background: #f1f0ed;

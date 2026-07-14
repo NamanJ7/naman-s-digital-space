@@ -33,7 +33,6 @@ export const siteConfig = {
     "I'm currently building Pore, an AI skincare app that starts with a guided photo of your face, then builds a personalized routine around your products, goals, and progress.",
     "Before this, I built AgriLanka, an agritech startup that received numerous grants, and it taught me what it actually takes to take an idea from zero to something real.",
     "I spend my days shipping software, writing about what I learn, and figuring out how to make an outsized impact. I believe in ==first principles thinking==, compounding efforts, and the power of just getting started. Done is better than perfect.",
-    "When I'm not building, you'll find me reading, exploring new ideas, or working on the next thing.",
   ],
 
   currentlyUpTo: [

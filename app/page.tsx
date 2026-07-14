@@ -5,7 +5,7 @@ import { Highlighted } from "@/components/Highlight";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export default function AboutPage() {
-  const [opening, , , philosophy, offHours] = siteConfig.intro;
+  const [opening, , , philosophy] = siteConfig.intro;
 
   return (
     <div className="flex flex-col gap-20">
@@ -77,18 +77,25 @@ export default function AboutPage() {
             me what it actually takes to take an idea from zero to something real.
           </p>
           <p>
-            Alongside building these products, I interned at{" "}
+            Alongside building these products, I&apos;m joining{" "}
+            <CompanyLink href="https://usemason.ai/" image="/mason-logo.png" name="Mason" tone="mason" />
+            {" "}as an AI sales engineering intern, helping bring AI employees to
+            real estate development teams by researching target accounts, shaping
+            personalized outreach, supporting demos, and turning what works into
+            repeatable sales playbooks. I&apos;m excited to learn from an incredible
+            team: a repeat founder who exited to Coinbase, a former Meta
+            SuperIntelligence engineer, and an operator who has led $2B+ in real
+            estate development. I also interned at{" "}
             <CompanyLink href="https://equintel.de/" image="/equintel-logo.png" name="Equintel" tone="equintel" />
             , where I helped develop AI software that turns unstructured company
             disclosures and market data into automated ESG assessments and
-            decision-ready sustainability insights. I also worked as a financial
+            decision-ready sustainability insights, and worked as a financial
             analyst intern at{" "}
             <CompanyLink href="https://bycig.org/" image="/bycig-logo.png" name="BYCIG" tone="bycig" />
             , supporting early-stage investment decisions through financial models,
             business-plan analysis, and concise memos on social-impact startups.
           </p>
           <p><Highlighted text={philosophy} /></p>
-          <p><Highlighted text={offHours} /></p>
         </div>
       </section>
 
