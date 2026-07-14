@@ -77,11 +77,11 @@ export default function AboutPage() {
             me what it actually takes to take an idea from zero to something real.
           </p>
           <p>
-            Alongside building these products, I&apos;m joining{" "}
+            Alongside building these products, I&apos;m a sales engineering intern at{" "}
             <CompanyLink href="https://usemason.ai/" image="/mason-logo.png" name="Mason" tone="mason" />
-            {" "}as an AI sales engineering intern, helping bring AI employees to
+            , helping bring AI employees to
             real estate development teams while learning from a team with deep
-            startup, AI, and real estate experience. I also interned at{" "}
+            startup, AI, and real estate experience. I was also an AI intern at{" "}
             <CompanyLink href="https://equintel.de/" image="/equintel-logo.png" name="Equintel" tone="equintel" />
             , building AI tools for ESG data automation, and worked as a financial
             analyst intern at{" "}
