@@ -80,20 +80,14 @@ export default function AboutPage() {
             Alongside building these products, I&apos;m joining{" "}
             <CompanyLink href="https://usemason.ai/" image="/mason-logo.png" name="Mason" tone="mason" />
             {" "}as an AI sales engineering intern, helping bring AI employees to
-            real estate development teams by researching target accounts, shaping
-            personalized outreach, supporting demos, and turning what works into
-            repeatable sales playbooks. I&apos;m excited to learn from an incredible
-            team: a repeat founder who exited to Coinbase, a former Meta
-            SuperIntelligence engineer, and an operator who has led $2B+ in real
-            estate development. I also interned at{" "}
+            real estate development teams while learning from a team with deep
+            startup, AI, and real estate experience. I also interned at{" "}
             <CompanyLink href="https://equintel.de/" image="/equintel-logo.png" name="Equintel" tone="equintel" />
-            , where I helped develop AI software that turns unstructured company
-            disclosures and market data into automated ESG assessments and
-            decision-ready sustainability insights, and worked as a financial
+            , building AI tools for ESG data automation, and worked as a financial
             analyst intern at{" "}
             <CompanyLink href="https://bycig.org/" image="/bycig-logo.png" name="BYCIG" tone="bycig" />
-            , supporting early-stage investment decisions through financial models,
-            business-plan analysis, and concise memos on social-impact startups.
+            , supporting early-stage social-impact investing through research,
+            financial models, and investment memos.
           </p>
           <p><Highlighted text={philosophy} /></p>
         </div>
