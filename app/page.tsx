@@ -77,7 +77,7 @@ export default function AboutPage() {
             me what it actually takes to take an idea from zero to something real.
           </p>
           <p>
-            Alongside building these products, I&apos;m a sales engineering intern at{" "}
+            Alongside building these products, I&apos;m an AI sales engineering intern at{" "}
             <CompanyLink href="https://usemason.ai/" image="/mason-logo.png" name="Mason" tone="mason" />
             , helping bring AI employees to
             real estate development teams while learning from a team with deep
